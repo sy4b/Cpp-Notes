@@ -1,3 +1,5 @@
+# 条款一：理解型别推导
+
 对于一段伪代码
 
 ```cpp
@@ -114,4 +116,55 @@ const int& rx=x;
 f(x); // T和Param都是int
 f(cx); // T和Param都是int
 f(rx);  // T和Param都是int
+```
+
+⚠️
+
+- 即使`cx`和`rx`代表`const`值，`param`仍然不具有`const`型别，这是很合理的。`param`是完全独立于`cx`和`rx`存在的对象，是一个副本
+- `const`和`volatile`仅会在按值传递形参时被忽略，若形参是`const`的引用或指针，则会被保留
+- 但是考虑这种情况：`expr`是一个指涉`const`对象的`const`指针，且`expr`按值传递给`param`
+```cpp
+template<typename T>
+void f(T param);
+
+const char* const ptr="Fun with pointers";
+
+f(ptr); // param是const char*，即一个指向const对象的指针，ptr本身是可以修改的，const丢失
+```
+---
+
+### 数组实参
+
+以上基本讨论完模板型别推导的主流情况，但还有边缘情况值得了解
+
+数组型别有别于指针型别，尽管有时候他们看起来可以互换。形成这种假象的主要原因是在很多语境下，数组会退化成指涉首元素的指针
+
+例如这段代码可以通过编译，就是因为退化的机制在发挥作用
+
+```cpp
+const char name[]="Syb is not Sb";  // name的型别是const char [14]
+const char* ptrToName=name; // 数组退化为指针
+```
+
+而将一个数组传递给持有按值形参的模板时，又会怎么样呢？
+
+```cpp
+template<typename T>
+void f(T param);
+
+f(name);
+```
+
+首先观察到，没有任何函数形参具有数组型别。`void myFunc(int param[]);`虽然合法，但会被等价的声明为`void myFunc(int* param);`。这种数组和指针形参的等价性，是作为C++基础的C根源遗迹
+
+由于数组形参声明会按照它们好像是指针形参那样去处理，因此在`f`的调用中，T会被推导为`const char*`
+
+```cpp
+f(name);  // name是个数组，但T却被推导为const char*
+```
+
+难点来了。尽管函数无法声明真正的数组型别的形参，他们却能够将形参声明为数组的引用。所以如果我们修改模板f，指定按引用方式传递实参
+
+```cpp
+
 ```
