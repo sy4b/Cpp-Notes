@@ -8,4 +8,4 @@
 
 ### Chapter 1.型别推导
 
-[条款一：理解型别推导](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Chapter%201.%20型别推导.md)
+[条款一：理解型别推导](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%231%20型别推导.md)
