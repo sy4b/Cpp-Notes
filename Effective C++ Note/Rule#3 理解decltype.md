@@ -51,3 +51,24 @@ auto authAndAccess(Container& c, Index i)->decltype(c[i]){  // 能运作，但�
 - 在函数名使用的`auto`和型别推导毫无关系，只为了说明使用C++11的返回值型别尾序语法，即该函数的返回值型别位于形参列表->之后。
 - 尾序返回值的好处在于指定返回值型别时，可以使用函数形参
 
+C++11允许对单表达式的lambda表达式返回值类型进行推导。
+
+C++14将范围扩大到一切lambda和一切函数，包括多表达式的。这意味着可以去掉尾置返回值，只保留`auto`。在该声明形式中，`auto`指明编译器依据函数实现来实施函数返回值的型别推导
+
+```cpp
+template<typename Container, typename Index>
+auto authAndAccess(Container& c, Index i){  // C++14 不甚正确
+  authenticateUser();
+  return c[i];                              // 返回值型别根据c[i]推导
+}
+```
+
+但根据[Rule#2](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%232%20理解auto型别推导.md)，编译器会对指定返回值类型为`auto`的函数实现模板型别的推导，对于上一个例子，这样就会留下隐患
+
+```cpp
+std::queue<int> d;
+...
+authAndAccess(d, 5)=10; // 验证用户，返回d[5]，将其赋值为10 但无法通过编译
+```
+
+此处d[5]返回引用，但模板类型推导将引用性剥夺（见[Rule#1](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%231%20型别推导.md)，因此得到的是一个int右值，而将10赋值给一个右值是禁止的
