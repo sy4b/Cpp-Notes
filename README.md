@@ -1,4 +1,6 @@
-# cpp-primer-5th-notes
+## cpp-primer-5th-notes
+
+---
 
 ## Effective Modern C++ Notes
 
@@ -23,3 +25,13 @@
 尽管有些`auto`型别推导结果按部就班符合标准规定的推导算法，但在程序员角度来看是错误的。这种情况下需要知道如何引导`auto`得到正确结果
 
 [条款五：优先选用auto，而非显式型别声明](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%235%20优先选用auto，而非显式型别声明.md)
+
+[条款六：当auto推导的型别不符合要求时，使用带显式型别的初始化物习惯语法]()
+
+---
+
+## Effective C++ Notes
+
+### Chapter 1. 让自己习惯C++
+
+[条款一：视C++为一个语法联邦]()
