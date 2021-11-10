@@ -35,3 +35,5 @@
 ### Chapter 1. 让自己习惯C++
 
 [条款一：视C++为一个语法联邦](https://github.com/sy4b/Cpp-Notes/blob/main/Effeictive%20C%2B%2B%20Notes/Rule%231%20视C%2B%2B为一个语法联邦.md)
+
+[条款二：尽可能以const enum inline替换#define](https://github.com/sy4b/Cpp-Notes/blob/main/Effeictive%20C%2B%2B%20Notes/Rule%232%20尽量以const，enum，inline替换%23defind.md)
