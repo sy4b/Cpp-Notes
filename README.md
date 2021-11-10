@@ -34,4 +34,4 @@
 
 ### Chapter 1. 让自己习惯C++
 
-[条款一：视C++为一个语法联邦]()
+[条款一：视C++为一个语法联邦](https://github.com/sy4b/Cpp-Notes/blob/main/Effeictive%20C%2B%2B%20Notes/Rule%231%20视C%2B%2B为一个语法联邦.md)
