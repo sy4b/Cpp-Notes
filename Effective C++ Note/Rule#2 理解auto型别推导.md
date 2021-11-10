@@ -42,8 +42,8 @@ int x4={27};
 ```cpp
 auto x1=27; // 型别是int，值是27
 auto x2(27); // 同上
-auto x3{27}; // 同上
 auto x4={27}; // 型别是std::initializer_list<int>，值是{27}
+auto x3{27}; // 同上
 ```
 
 这是`auto`的一条特殊的型别推导规则所致，当用于`auto`声明变量的初始化表达式是大括号括起时，推导的型别就属于`std::intializer_list`
