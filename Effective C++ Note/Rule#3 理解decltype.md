@@ -71,4 +71,72 @@ std::queue<int> d;
 authAndAccess(d, 5)=10; // 验证用户，返回d[5]，将其赋值为10 但无法通过编译
 ```
 
-此处d[5]返回引用，但模板类型推导将引用性剥夺（见[Rule#1](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%231%20型别推导.md)，因此得到的是一个int右值，而将10赋值给一个右值是禁止的
+此处`d[5]`返回引用，但模板类型推导将引用性剥夺（见[Rule#1](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%231%20型别推导.md)），因此得到的是一个int右值，而将10赋值给一个右值是禁止的
+
+如果想让这个函数按照期望运作，就需要对返回值实施`decltype`型别推导，指定返回值型别与c[i]完全一致，C++14中采用`decltype(auto)`饰辞，`auto`指明需要实施推导，推导过程采用`decltype`的规则
+
+```cpp
+template<typename Container, typename Index>
+decltype(auto)  authAndAccess(Container& c, Index i){ // C++14，可以运作，但仍然亟待改进
+  aythenticateUser();
+  return c[i];
+};
+```
+
+`decltype(auto)`并不限于函数返回值型别处使用，在变量声明时，也可以用其推导
+
+```cpp
+Widget w;
+
+const Widget& cw=w;
+
+auto myWidget1=cw;            // Widget
+
+decltype(auto) myWidget2=cw;  // const Widget&
+```
+
+---
+
+最后来看改进
+
+```cpp
+template<typename Container, typename Index>
+decltype(auto)  authAndAccess(Container& c, Index i){ // C++14，可以运作，但仍然亟待改进
+```
+
+- 容器的传递方式是非常量的左值引用，也就意味着允许客户对容器进行修改
+- 但也意味着无法向该函数传递右值容器，因为右值不能绑定到左值引用
+
+一般来说不会向函数传递右值容器，因为作为一个临时对象，引用在被析构后处于空悬状态
+
+```cpp
+// error
+std::deque<std::string> makeStringDeque();  // 工厂函数
+// 制作makeStringDeuqe返回的deue的第五个元素的副本
+auto s=authAndAccess(makeStringDeque(),5);
+```
+如果要支持上述的语法，就要修改`authAndAccess`的声明，以同时接受左值和右值，重载是一种办法，但万能引用此时可以大展身手。
+
+```cpp
+template<typename Container, typename Index>
+decltype(auto) authAndAccess(ConTainer&& c, Index i);
+```
+
+同时需要更新实现，对万能引用需要应用std::forward
+
+```cpp
+// C++14最终版
+
+template<typename Container, typename Index>
+decltype(auto) authAndAccess(ConTainer&& c, Index i){
+  authenticateUser();
+  return std::forward<Container>(c)[i];
+}
+
+// C++11最终版
+template<typename Container, typename Index>
+auto authAndAccess(ConTainer&& c, Index i)->decltye(std::forward<Container>(c)[i]){
+  authenticateUser();
+  return std::forward<Container>(c)[i];
+}
+```
