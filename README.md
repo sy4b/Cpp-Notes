@@ -26,7 +26,7 @@
 
 [条款五：优先选用auto，而非显式型别声明](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%235%20优先选用auto，而非显式型别声明.md)
 
-[条款六：当auto推导的型别不符合要求时，使用带显式型别的初始化物习惯语法]()
+[条款六：当auto推导的型别不符合要求时，使用带显式型别的初始化物习惯语法](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%236%20auto推导的型别不符合要求时，显式型别初始化.md)
 
 ---
 
