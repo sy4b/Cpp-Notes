@@ -35,6 +35,8 @@
 
 [条款八：优先选用nullptr](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%238%20优先选用nullptr而非0或NULL.md)
 
+[条款九：优先选用别名声明而不是typedef](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%239%20优先选用别名声明而非typedef.md)
+
 ---
 
 ## Effective C++ Notes
