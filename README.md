@@ -28,13 +28,12 @@
 
 [条款六：当auto推导的型别不符合要求时，使用带显式型别的初始化物习惯语法](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%236%20auto推导的型别不符合要求时，显式型别初始化.md)
 
-[条款七：创建对象时区分()和{}]()
-
-[条款八：优先选用nullptr](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%238%20优先选用nullptr而非0或NULL.md)
 
 ### Chapter 3. 转向现代C++
 
-[条款七：创建对象时注意区分()和{}]()
+[条款七：创建对象时区分()和{}](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%237%20创建对象时注意区分()和%7B%7D.md)
+
+[条款八：优先选用nullptr](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%238%20优先选用nullptr而非0或NULL.md)
 
 ---
 
