@@ -84,8 +84,8 @@ Widget w3{};
 ```cpp
 class Widget{
 public:
-  Widget(int i, bool b);
-  Widget(int i, double d);
+  Widget(int i, bool b);      // 1
+  Widget(int i, double d);    // 2
 };
 
 Widget w1(10, true);          // 1
@@ -105,5 +105,124 @@ public:
 
 Widget w1(10, true);      // 1
 Widget w2{10, true};      // 3，10和true被强制转换为long double
+Widget w3(10, 5.0);       // 2
+Widget w4{10, 5.0};       // 3，10和5.0被强制转换为long double
 ```
 
+平时执行复制或者移动的构造函数也可能被带有`std::intializer_list`的形参的构造函数劫持
+
+```cpp
+class Widget{
+public:
+  Widget(int i, bool b);
+  Widget(int i, double d);
+  Widget(std::initializer_list<long double> i1);
+  operator float()const;  // 强制转换为float
+};
+
+Widget w5(w4);            // 调用复制构造函数
+
+Widget w6{w4};            // 3，w4的返回值先被强制转换为float，然后被强制转换为long double
+
+Widget w7(std::move(w4)); // 调用移动构造函数
+
+Widget w8{std::move(w4)}; // 3
+```
+
+编译器想要将大括号初始化物匹配带有`std::intializer_list`型别形参的构造函数决心十分强烈，以至于最优选的构造函数无法被调用时，这种决心还是占上风
+
+```cpp
+class Widget{
+public:
+  Widget(int i, doubele);
+  Widget(int i, bool b);
+  Widget(std::initializer_list<bool> i1);
+};
+
+Widget w{10, 5.0};        // Error
+```
+
+这个例子中，前两个构造函数会被忽略，而要调用第三个构造函数就要求将一个`int`和`double`转换为`bool`，而这两个强制类型转换都是窄化的，在大括号初始化物内部是禁止的，因此整段代码无法通过编译
+
+只有在找不到任何方法将大括号初始化物中的实参转换成`std::initializer_list`模板中的型别时，编译器才会去检查普通的重载决议。例如无法将`int`和`double`转换为`string`
+
+```cpp
+class Widget{
+public:
+  Widget(int i, bool b);                          // 1
+  Widget(int i, double d);                        // 2
+  
+  Widget(std::initializer_list<std::string> i1);  // 3
+};
+
+Widget w1{10, true};      // 1
+Widget w2{10, 5.0};       // 2
+```
+
+---
+
+### 特殊边界用例
+
+假设使用一对空大括号创建一个对象，而该对象支持默认构造函数，又带有支持`std::initializer_list`类型形参的构造函数。那么这对空大括号意义如何？
+
+语言规定，在这种情况下应该执行默认构造，空大括号表示的是没有实参，而不是空的`std::initializer_list`
+
+如果的确想要调用一个带有`initializer_list`型别形参的构造函数，并且传入一个空的`std::initializer_list`实参，可以将空大括号作为构造函数实参，即把一对空大括号放入一对小括号或大括号之中
+
+```cpp
+Widget w4({});    // 带有std::initializer_list型别的形参的构造函数，传入一个空的std::initializer_list
+
+Widget w5{{}};    // 同上
+```
+
+---
+
+直接受到上述规则影响的一个类就是`std::vector`
+
+- 这个类中有一个不带`std::initializer_list`型别形参的构造函数，允许指定容器尺寸以及初始化值
+- 还有一个带有`std::initializer_list`型别形参的构造函数，允许逐个指定`std::vector`中的元素
+
+使用大小括号会有完全不同的结果
+
+```cpp
+std::vector<int> v1(10, 20);          // 容器内有10个元素，初始值均为20
+std::vector<int> v2{10, 20};          // 容器内有2个元素，初始值为10和20
+```
+
+一般来说一个设计成功的类，构造函数设计为使用大小括号都不影响使用才算好，`std::vector`的接口算是失败的
+
+开发模板时，在创建对象时选用小括号还是大括号是一个难题。举例来说，如果想以任意数量的实参创建一个任意型别的对象，那么一个可变模板可以让这种概念直截了当
+
+```cpp
+template<tyepname T, typename... Ts>
+void doSomeWork(Ts&&... params){
+  ... // 利用params创建局部对象T
+}
+```
+
+要将伪代码变为实际代码有两种方式
+
+```cpp
+T localObject(std::forward<Ts>(params)...);
+
+T localObject{std::forward<Ts>(params)...};
+```
+
+调用代码
+
+```cpp
+std::vector<int> v;
+...
+doSomeWork<std::vector<int>>(10, 20);
+```
+
+两种方式结果不一样，孰对孰错？只有开发者才知道
+
+---
+
+# 要点速记
+
+- 大括号初始化可以应用的语境最宽泛，可以阻止隐式窄化型别转换，且对解析语法免疫
+- 构造函数重载决议期间，只要有任何可能，大括号初始化物就会与带有`std::initializer_list`形参类别的函数相匹配，即使其他构造函数有更加匹配的形参列表
+- 使用小括号或大括号可能结果大相径庭，例如`std::vector`
+- 对模板内容进行对象创建时，究竟使用小括号还是大括号是一个棘手问题
