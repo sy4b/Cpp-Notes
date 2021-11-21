@@ -9,6 +9,6 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 本章一开始是直接易懂的，基于对象的资源管理办法，建立在C++对构造函数】析构函数和`copying`函数的基础上
 
-[rule13 用对象管理资源](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/rule32%20以对象管理资源.md)
+[rule13 用对象管理资源](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C++%20Notes/Notes/rule13%20以对象管理资源.md)
 
 ---
