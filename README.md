@@ -36,23 +36,3 @@
 [条款八：优先选用nullptr](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%238%20优先选用nullptr而非0或NULL.md)
 
 [条款九：优先选用别名声明而不是typedef](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Note/Rule%239%20优先选用别名声明而非typedef.md)
-
----
-
-## Effective C++ Notes
-
-### Chapter 1. 让自己习惯C++
-
-[条款一：视C++为一个语法联邦](https://github.com/sy4b/Cpp-Notes/blob/main/Effeictive%20C%2B%2B%20Notes/Rule%231%20视C%2B%2B为一个语法联邦.md)
-
-[条款二：尽可能以const enum inline替换#define](https://github.com/sy4b/Cpp-Notes/blob/main/Effeictive%20C%2B%2B%20Notes/Rule%232%20尽量以const，enum，inline替换%23defind.md)
-
-[条款三：尽可能使用const](https://github.com/sy4b/Cpp-Notes/blob/main/Effeictive%20C%2B%2B%20Notes/Rule%233%20尽可能使用const.md)
-
-[条款四:确保对象被使用前已经初始化](https://github.com/sy4b/Cpp-Notes/blob/main/Effeictive%20C%2B%2B%20Notes/Rule%234%20确定对象被使用前已被初始化.md)
-
-### Chapter 2. 构造/析构/赋值运算
-
-几乎每写的一个`class`都有一个或多个构造函数、一个析构函数、一个`copy`运算符
-
-[条款五：了解C++默默编写并调用哪些函数]()
