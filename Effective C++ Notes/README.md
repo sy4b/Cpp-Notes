@@ -35,6 +35,8 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule21 必须返回对象时，不要妄想返回reference](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule21%20必须返回对象时，别妄想返回其reference.md)
 
-[rule22 将成员变量声明为private]()
+[rule22 将成员变量声明为private](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule22%20将成员变量声明为private.md)
+
+[rule23 宁以non-member、non-friend函数替换member成员函数]()
 
 ---
