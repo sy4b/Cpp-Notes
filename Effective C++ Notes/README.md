@@ -17,6 +17,16 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule16 配对使用new和delete](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule16%20成对使用new和delete要采取相同形式.md)
 
-[rule17 以独立语句将newd对象置入智能指针]()
+[rule17 以独立语句将newd对象置入智能指针](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule17%20以独立语句将newd对象置入智能指针.md)
+
+---
+
+## Chapter 4 设计与声明
+
+所谓软件设计，就是“令软件做出你希望他做出的事情”的步骤和做法，通常从一般性的构想开始，最后演变成十足的细节，允许特殊接口的开发。这些借口而后必须转换为C++声明式。
+
+本章探讨：让接口更容易被正确使用，不容易被误用。
+
+[rule18 让接口更容易被正确使用，不容易被误用]()
 
 ---
