@@ -15,4 +15,8 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule15 在资源管理类中提供访问原始资源的方法](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C++%20Notes/Notes/rule15%20在资源管理类中提供对原始资源的访问.md)
 
+[rule16 配对使用new和delete](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule16%20成对使用new和delete要采取相同形式.md)
+
+[rule17 以独立语句将newd对象置入智能指针]()
+
 ---
