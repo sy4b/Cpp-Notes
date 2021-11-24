@@ -33,4 +33,8 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule20 宁可以pass-by-reference-to-const替换pass-by-value](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule20%20宁可以pass-by-reference-to-const替换pass-by-value.md)
 
+[rule21 必须返回对象时，不要妄想返回reference](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule21%20必须返回对象时，别妄想返回其reference.md)
+
+[rule22 将成员变量声明为private]()
+
 ---
