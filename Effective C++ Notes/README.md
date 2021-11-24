@@ -13,4 +13,6 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule14 小心copying行为](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule14%20在资源管理类中小心copying行为.md)
 
+[rul15 在资源管理类中提供访问原始资源的方法](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule14%20在资源管理类中提供对原始资源的访问.md)
+
 ---
