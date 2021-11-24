@@ -29,7 +29,7 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule18 让接口更容易被正确使用，不容易被误用](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C++%20Notes/Notes/rule18%20让接口更容易被正确使用，不容易被误用.md)
 
-[rule19 设计class犹如设计type]()
+[rule19 设计class犹如设计type](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule19%20设计class犹如设计type.md)
 
 [rule20 宁可以pass-by-reference-to-const替换pass-by-value](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule20%20宁可以pass-by-reference-to-const替换pass-by-value.md)
 
