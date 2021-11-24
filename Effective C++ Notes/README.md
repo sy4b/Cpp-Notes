@@ -31,4 +31,6 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule19 设计class犹如设计type]()
 
+[rule20 宁可以pass-by-reference-to-const替换pass-by-value](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule20%20宁可以pass-by-reference-to-const替换pass-by-value.md)
+
 ---
