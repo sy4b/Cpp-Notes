@@ -37,6 +37,8 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule22 将成员变量声明为private](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule22%20将成员变量声明为private.md)
 
-[rule23 宁以non-member、non-friend函数替换member成员函数]()
+[rule23 宁以non-member、non-friend函数替换member成员函数](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule23%20宁以non-member、non-friend函数替换member成员函数.md)
+
+[rule24 若所有参数都需要类型转换，请为此使用non-member函数]()
 
 ---
