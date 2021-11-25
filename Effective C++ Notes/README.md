@@ -41,6 +41,8 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule24 若所有参数都需要类型转换，请为此使用non-member函数](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule24%20若所有参数都需要类型转换，请为此使用non-member函数.md)
 
-[rule25 考虑写出一个不抛出异常的swap函数]()
+[rule25 考虑写出一个不抛出异常的swap函数](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule25%20考虑写出一个不抛出异常的swap函数.md)
 
 ---
+
+## Chapter 5 实现
