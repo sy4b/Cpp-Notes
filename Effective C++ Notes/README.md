@@ -54,3 +54,7 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 [rule26 尽量延后变量定义式的出现时间](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule26%20尽量延后变量定义式的出现时间.md)
 
 [rule27 尽量少做转型动作](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule27%20尽量少做转型动作.md)
+
+[rule28 避免返回handles指向对象内部成分](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule28%20避免返回handles指向对象内部成分.md)
+
+[rule29 为异常安全努力是值得的]()
