@@ -10,4 +10,4 @@ syb的C++学习笔记
 
 目前在读
 
-《Effecitive C++》  [链接]()
+《Effecitive C++》  [链接](https://github.com/sy4b/Cpp-Notes/tree/main/Effective%20C%2B%2B%20Notes)
