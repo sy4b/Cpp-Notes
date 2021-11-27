@@ -59,4 +59,6 @@ C++程序最常使用的资源就是动态分配内存，但内存只是必须�
 
 [rule29 为异常安全努力是值得的](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule29%20为异常安全努力是值得的.md)
 
-[rule30 透彻了解inlining的里里外外]()
+[rule30 透彻了解inlining的里里外外](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule30%20透彻了解inlining的里里外外.md)
+
+[rule31 将文件之间的编译依存关系降到最低]()
