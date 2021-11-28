@@ -71,6 +71,7 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 本章对这些题目全面宣战
 
-[rule32 确定你的public继承塑造出is-a关系]()
+[rule32 确定你的public继承塑造出is-a关系](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule32%20确定你的public继承塑造出is-a关系.md)
 
+[rule33 避免遮掩继承而来的名称]()_
 ---
