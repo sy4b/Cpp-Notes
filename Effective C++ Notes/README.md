@@ -75,5 +75,6 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 [rule33 避免遮掩继承而来的名称](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule33%20避免遮掩继承而来的名称.md)
 
-[rule34 区分接口继承和实现继承]()
+[rule34 区分接口继承和实现继承](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule34%20区分接口继承和实现继承.md)
+
 ---
