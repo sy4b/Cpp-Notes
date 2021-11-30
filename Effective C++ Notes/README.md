@@ -79,6 +79,8 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 [rule35 考虑virtual函数之外的选择](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule35%20考虑virtual函数以外的选择.md)
 
-[rule36 绝不重定义继承而来的non-virtual函数]()
+[rule36 绝不重定义继承而来的non-virtual函数](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule36%20绝不重定义继承而来的non-virtual函数.md)
+
+[rule37 绝不重定义继承而来的缺省参数初始值]()
 
 ---
