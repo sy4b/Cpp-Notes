@@ -81,6 +81,8 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 [rule36 绝不重定义继承而来的non-virtual函数](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule36%20绝不重定义继承而来的non-virtual函数.md)
 
-[rule37 绝不重定义继承而来的缺省参数初始值]()
+[rule37 绝不重定义继承而来的缺省参数初始值](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule37%20绝不修改继承而来的函数参数缺省值.md)
+
+[rule38 通过复合塑模实现出"has-a"或“根据某物实现出”]()
 
 ---
