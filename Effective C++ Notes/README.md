@@ -87,6 +87,10 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 [rule39 明智而慎重使用private继承](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule39%20明智而慎重使用private继承.md)
 
-[rule40 明智而慎重使用多重继承]()
+[rule40 明智而慎重使用多重继承](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule40%20明智而慎重使用多重继承.md)
 
 ---
+
+## Chapter 7 模板及泛型编程
+
+[rule41 了解隐式接口和编译期多态]()
