@@ -97,6 +97,6 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 [rule42 typename的双重含义](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule42%20了解typename的双重含义.md)
 
-[rule43 处理模板化基类中的名称]()
+[rule43 处理模板化基类中的名称](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule43%20处理模板化基类的名称.md)
 
 [rule44]()
