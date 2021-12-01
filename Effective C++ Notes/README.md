@@ -93,4 +93,4 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 ## Chapter 7 模板及泛型编程
 
-[rule41 了解隐式接口和编译期多态]()
+[rule41 了解隐式接口和编译期多态](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule41%20了解隐式接口和编译期多态.md)
