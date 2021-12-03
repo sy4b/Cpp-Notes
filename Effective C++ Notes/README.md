@@ -99,4 +99,17 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 [rule43 处理模板化基类中的名称](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule43%20处理模板化基类的名称.md)
 
-[rule44]()
+[rule44 将与参数无关的代码抽离templates](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule44%20将与参数无关的代码抽离templates.md)
+
+[rule45 运用成员函数模板接受所有兼容类型](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule45%20运用成员函数模板接受所有兼容类型.md)
+
+[rule46 需要类型转换时为模板定义非成员函数](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule46%20需要类型转换时为模板定义非成员函数.md)
+
+[rule47 用traits classes表现类型信息](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule47%20用traits%20classes表现类型信息.md)
+
+[rule48 认识模板元编程](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule48%20认识模板元编程.md)
+
+---
+
+## Chapter 8 定制new和delete
+
