@@ -113,3 +113,18 @@ C++的OOP包含很多东西：继承、链接，成员函数的选项等等
 
 ## Chapter 8 定制new和delete
 
+[rule49 了解new-handle的行为](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule49%20了解new-handle的行为.md)
+
+[rule50 了解new和delete的合理替换时机](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule50%20了解new和delete的合理替换时机.md)
+
+[rule51 编写new和delete需要固守常规](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule51%20编写new和delete需要固守常规.md)
+
+[rule52 使用placement new的话也要使用placement delete](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule52%20使用placement%20new的话也要使用placement%20delete.md)
+
+---
+
+## Chapter 9 杂项讨论
+
+[rule53 不要轻易忽视编译器的警告](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule53%20不要轻易忽视编译器的警告.md)
+
+[rule54 熟悉包括TR1在内的标准程序库](https://github.com/sy4b/Cpp-Notes/blob/main/Effective%20C%2B%2B%20Notes/Notes/rule54%20熟悉包括TR1在内的标准程序库.md)
